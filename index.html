@@ -27,6 +27,67 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+     <style>
+        /* Custom styles for dual hero section */
+        .dual-hero-wrapper {
+            display: flex;
+            width: 100%;
+            gap: 0;
+        }
+        
+        .hero-section.dual-person {
+            width: 50%;
+            padding: 100px 30px 60px;
+            position: relative;
+        }
+        
+        .hero-section.dual-person:first-child {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-section.dual-person .container {
+            max-width: 100%;
+            padding: 0;
+        }
+        
+        .hero-section.dual-person .hero-content-box {
+            text-align: center;
+        }
+        
+        .hero-section.dual-person .hero-image-box {
+            margin-top: 30px;
+        }
+        
+        .hero-section.dual-person .button-box {
+            justify-content: center;
+        }
+        
+        .hero-section.dual-person .funfact-area {
+            margin-top: 50px;
+        }
+        
+        .hero-section.dual-person .intro_text {
+            display: none;
+        }
+        
+        @media (max-width: 991px) {
+            .dual-hero-wrapper {
+                flex-direction: column;
+            }
+            
+            .hero-section.dual-person {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .hero-section.dual-person:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -156,79 +217,103 @@
     <!-- HEADER END -->
 
     <main class="site-content" id="content">
-        <!-- HERO SECTION START -->
-        <section class="hero-section d-flex align-items-center" id="intro">
-            <div class="intro_text">
-                <svg viewBox="0 0 1320 300">
-                    <text x="50%" Y="50%" text-anchor="middle">
-                        HI
-                    </text>
-                </svg>
-            </div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="hero-content-box">
-                            <span class="hero-sub-title wow fadeInLeft" data-wow-delay="1.1s">I am Gerold</span>
-                            <h1 class="hero-title wow fadeInLeft" data-wow-delay="1.2s">Web Developer +<br>UX Designer
-                            </h1>
+          <!-- DUAL HERO SECTION START -->
+        <div class="dual-hero-wrapper">
+            <!-- PERSON 1 -->
+            <section class="hero-section dual-person d-flex align-items-center" id="intro">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="hero-content-box">
+                                <span class="hero-sub-title wow fadeInUp" data-wow-delay=".3s">I am Gerold</span>
+                                <h1 class="hero-title wow fadeInUp" data-wow-delay=".4s">Web Developer +<br>UX Designer</h1>
 
-                            <div class="hero-image-box d-md-none text-center wow fadeInRight" data-wow-delay="1.3s">
-                                <img src="assets/img/hero/me.png" alt="">
+                                <div class="hero-image-box text-center wow fadeInUp" data-wow-delay=".5s">
+                                    <img src="assets/img/hero/me.png" alt="">
+                                </div>
+
+                                <p class="lead wow fadeInUp" data-wow-delay=".6s">I break down complex user experience problems to create integrity focused solutions that connect billions of people</p>
+                                
+                                <div class="button-box d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".7s">
+                                    <a href="#" class="btn tj-btn-secondary">Download CV</a>
+                                    <ul class="ul-reset social-icons">
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <p class="lead wow fadeInLeft" data-wow-delay="1.4s">I break down complex user experinece
-                                problems to create integritiy focussed solutions that connect billions of people</p>
-                            <div class="button-box d-flex flex-wrap align-items-center">
-                                <a href="#" class="btn tj-btn-secondary wow fadeInLeft" data-wow-delay="1.5s">Download
-                                    CV</a>
-                                <ul class="ul-reset social-icons wow fadeInLeft" data-wow-delay="1.6s">
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 d-none d-md-block">
-                        <div class="hero-image-box text-center wow fadeInRight" data-wow-delay="1.5s">
-                            <img src="assets/img/hero/me.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="funfact-area">
-                    <div class="row">
-                        <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="14">0</span></div>
-                                <div class="text">Years of <br>Experience</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="50">0</span>+</div>
-                                <div class="text">Project <br>Completed</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="1.5">0</span>K</div>
-                                <div class="text">Happy <br>Clients</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="14">0</span></div>
-                                <div class="text">Years of <br>Experience</div>
+                            <div class="funfact-area">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                            <div class="number"><span class="odometer" data-count="14">0</span></div>
+                                            <div class="text">Years of <br>Experience</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                            <div class="number"><span class="odometer" data-count="50">0</span>+</div>
+                                            <div class="text">Project <br>Completed</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- HERO SECTION END -->
+            </section>
+
+            <!-- PERSON 2 -->
+            <section class="hero-section dual-person d-flex align-items-center">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="hero-content-box">
+                                <span class="hero-sub-title wow fadeInUp" data-wow-delay=".3s">I am Sarah</span>
+                                <h1 class="hero-title wow fadeInUp" data-wow-delay=".4s">Creative Designer +<br>Brand Strategist</h1>
+
+                                <div class="hero-image-box text-center wow fadeInUp" data-wow-delay=".5s">
+                                    <img src="assets/img/hero/me.png" alt="">
+                                </div>
+
+                                <p class="lead wow fadeInUp" data-wow-delay=".6s">I create stunning visual experiences and strategic brand solutions that resonate with audiences worldwide</p>
+                                
+                                <div class="button-box d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".7s">
+                                    <a href="#" class="btn tj-btn-secondary">Download CV</a>
+                                    <ul class="ul-reset social-icons">
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="funfact-area">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                            <div class="number"><span class="odometer" data-count="12">0</span></div>
+                                            <div class="text">Years of <br>Experience</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                            <div class="number"><span class="odometer" data-count="2">0</span>K</div>
+                                            <div class="text">Happy <br>Clients</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- DUAL HERO SECTION END -->
 
         <!-- SERVICES SECTION START -->
         <section class="services-section" id="services-section">
